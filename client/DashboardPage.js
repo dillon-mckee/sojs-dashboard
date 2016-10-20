@@ -60,22 +60,30 @@ render: function() {
         <h1>State of JavaScript 2016</h1>
         <div className="segment">
           <div className="flex">
-            <Link to="angular-2" className="one third column stat">
-              <h6>Used Angular 2 and would use it again?</h6>
-              <div className="circle" id="angular2-satisfaction-circle"></div>
-            </Link>
 
-            <Link to="react" className="one third column stat">
-              <h6>Used React and would use it again?</h6>
-              <div className="circle" id="react-satisfaction-circle"></div>
-            </Link>
+            <div className="half column stat">
+              <Link to="angular-2">
+                <h6>Used Angular 2 and would use it again?</h6>
+                <div className="circle" id="angular2-satisfaction-circle"></div>
+              </Link>
+            </div>
 
-            <Link to="ember" className="one third column stat">
-              <h6>Used Ember and would use it again?</h6>
-              <div className="circle" id="ember-satisfaction-circle"></div>
-            </Link>
-          </div>
-          </div>
+            <div className="half column stat">
+              <Link to="react">
+                <h6>Used React and would use it again?</h6>
+                <div className="circle" id="react-satisfaction-circle"></div>
+              </Link>
+            </div>
+
+            <div className="column center stat">
+              <Link to="ember">
+                <h6>Used Ember and would use it again?</h6>
+                <div className="circle" id="ember-satisfaction-circle"></div>
+              </Link>
+            </div>
+        </div>
+        </div>
+
            <div className="segment">
 
           <div className="two thirds column left">

@@ -31,13 +31,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 html, body {
-  @extend %clearfix;
+  .clearfix;
   background: #fafafa;
   color: #444;
   font: 300 10px sans-serif;
   font-smoothing: antialiased;
   height: 100%;
   min-width: 278px;
+}
+
+.clearfix {
+  &:after {
+    clear: both;
+    content: " ";
+    display: block;
+  }
 }
 
 .header {
@@ -444,8 +452,16 @@ iframe {
   }
 }
 
+.stat {
+  text-align:center;
+  padding:2rem;
+  h6 {
+    padding: 1rem 0rem;
+  }
+}
+
 .segment {
-  @extend %clearfix;
+  .clearfix;
   background: lighten(#fafafa, 5%);
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.05);
   margin: 1rem 0;
@@ -501,7 +517,7 @@ header.global {
 }
 
 header.section.head {
-  @extend %clearfix;
+  .clearfix;
 
   .breadcrumb {
     font-size: 1.2rem;
@@ -531,13 +547,13 @@ header.section.head {
 }
 
 footer.section.foot {
-  @extend %clearfix;
+  .clearfix;
   clear: both;
   padding: 2rem 0;
 }
 
 .two.images {
-  @extend %clearfix;
+  .clearfix;
   padding: 1rem 0 2rem;
 
   img:first-child {
@@ -556,7 +572,7 @@ main.global {
 }
 
 .row {
-  @extend %clearfix;
+  .clearfix;
   clear: both;
 
   &.flex {
@@ -568,7 +584,7 @@ main.global {
 }
 
 .column {
-  @extend %clearfix;
+  .clearfix;
   float: left;
 
   &.left {
@@ -1627,7 +1643,7 @@ form .button,
   margin: 1.5rem 0 .5rem;
 }
 .two.fields {
-  @extend %clearfix;
+  .clearfix;
   clear: both;
 }
 .two.fields > div.input,
@@ -1643,7 +1659,7 @@ form .button,
   float: right;
 }
 .three.fields {
-  @extend %clearfix;
+  .clearfix;
 }
 .three.fields > div.input,
 .three.fields > .field {
@@ -2313,7 +2329,7 @@ form, .form {
 }
 
 .two.fields {
-  @extend %clearfix;
+  .clearfix;
   clear: both;
 
   > div.input, > .field {
@@ -2331,7 +2347,7 @@ form, .form {
 }
 
 .three.fields {
-  @extend %clearfix;
+  .clearfix;
 
   > div.input, > .field {
     float: left;
