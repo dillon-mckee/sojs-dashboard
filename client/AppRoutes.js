@@ -12,10 +12,40 @@ var hashHistory = router.hashHistory;
 var connect = require('react-redux').connect;
 var DashboardPageLayout = require('./DashboardPageLayout');
 var DashboardPage = require('./DashboardPage');
-var PageAngular2 = require('./PageAngular2');
-var PageAngular = require('./PageAngular');
-var PageEmber = require('./PageEmber');
-var PageReact = require('./PageReact');
+//var PageAngular2 = require('./PageAngular2');
+//var PageAngular = require('./PageAngular');
+//var PageEmber = require('./PageEmber');
+//var PageReact = require('./PageReact');
+var PageStats = require('./PageStats');
+
+
+var PageAngular2 = function(){
+  return(
+    <div>
+      <PageStats id="angular2" name="Angular 2" />
+    </div>);
+};
+
+var PageAngular = function(){
+  return(
+    <div>
+      <PageStats id="angular" name="Angular" />
+    </div>);
+};
+
+var PageEmber = function(){
+  return(
+    <div>
+      <PageStats id="ember" name="Ember" />
+    </div>);
+};
+
+var PageReact = function(){
+  return(
+    <div>
+      <PageStats id="react" name="React" />
+    </div>);
+};
 
 var AppRoutes = React.createClass({
 

@@ -93,7 +93,7 @@ this._createChart();
             </div>
 
             <div className="half column stat">
-              <Link to="ember">
+              <Link to="angular">
                 <h6>Used Angular and would use it again?</h6>
                 <div className="circle" id="angular-satisfaction-circle"></div>
               </Link>
