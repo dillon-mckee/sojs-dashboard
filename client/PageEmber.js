@@ -11,28 +11,28 @@ var Link = router.Link;
 
 var actions = require('./actions');
 
-var PageAngular2 = React.createClass({
+var PageEmber = React.createClass({
 
 
   _createChart: function() {
    Circles.create({
-     id:                  'angular2-satisfaction-circle',
+     id:                  'ember-satisfaction-circle',
      radius:              70,
-     value:               this.props.angular2Satisfaction,
+     value:               this.props.emberSatisfaction,
      maxValue:            100,
      width:               10,
      text:                function(value){return value + '%';},
-     colors:              ['black', 'red']
+     colors:              ['black', 'orange']
    });
 
    Circles.create({
-     id:                  'angular2-interest-circle',
+     id:                  'ember-interest-circle',
      radius:              70,
-     value:               this.props.angular2Interest,
+     value:               this.props.emberInterest,
      maxValue:            100,
      width:               10,
      text:                function(value){return value + '%';},
-     colors:              ['black', 'firebrick']
+     colors:              ['black', 'coral']
    });
 
  },
@@ -48,21 +48,21 @@ render: function() {
 
     return (
       <div>
-        <h1>State of JavaScript 2016: Angular 2</h1>
+        <h1>State of JavaScript 2016: Ember</h1>
         <div className="segment">
           <div className="flex">
 
           <div className="half column stat">
             <Link to="react">
-              <h6>Interested in using Angular 2?</h6>
-              <div className="circle" id="angular2-interest-circle"></div>
+              <h6>Interested in using Ember?</h6>
+              <div className="circle" id="ember-interest-circle"></div>
             </Link>
           </div>
 
             <div className="half column stat">
               <Link to="angular-2">
-                <h6>Used Angular 2 and would use it again?</h6>
-                <div className="circle" id="angular2-satisfaction-circle"></div>
+                <h6>Used Ember and would use it again?</h6>
+                <div className="circle" id="ember-satisfaction-circle"></div>
               </Link>
             </div>
         </div>
@@ -79,13 +79,13 @@ render: function() {
 
 var mapStateToProps = function(state, props) {
     return {
-        angular2Interest: state.angular2Interest,
-        angular2NotInterested: state.angular2NotInterested,
-        angular2Satisfaction: state.angular2Satisfaction,
-        angular2NotSatisfied: state.angular2NotSatisfied,
+        emberInterest: state.emberInterest,
+        emberNotInterested: state.emberNotInterested,
+        emberSatisfaction: state.emberSatisfaction,
+        emberNotSatisfied: state.emberNotSatisfied,
     };
 };
 
-var Container = connect(mapStateToProps) (withRouter(PageAngular2));
+var Container = connect(mapStateToProps)(PageEmber);
 
 module.exports = Container;

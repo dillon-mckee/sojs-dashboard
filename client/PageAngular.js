@@ -11,28 +11,28 @@ var Link = router.Link;
 
 var actions = require('./actions');
 
-var PageAngular2 = React.createClass({
+var PageAngular = React.createClass({
 
 
   _createChart: function() {
    Circles.create({
-     id:                  'angular2-satisfaction-circle',
+     id:                  'angular-satisfaction-circle',
      radius:              70,
-     value:               this.props.angular2Satisfaction,
+     value:               this.props.angularSatisfaction,
      maxValue:            100,
      width:               10,
      text:                function(value){return value + '%';},
-     colors:              ['black', 'red']
+     colors:              ['black', 'mediumvioletred']
    });
 
    Circles.create({
-     id:                  'angular2-interest-circle',
+     id:                  'angular-interest-circle',
      radius:              70,
-     value:               this.props.angular2Interest,
+     value:               this.props.angularInterest,
      maxValue:            100,
      width:               10,
      text:                function(value){return value + '%';},
-     colors:              ['black', 'firebrick']
+     colors:              ['black', 'palevioletred']
    });
 
  },
@@ -48,21 +48,21 @@ render: function() {
 
     return (
       <div>
-        <h1>State of JavaScript 2016: Angular 2</h1>
+        <h1>State of JavaScript 2016: Angular </h1>
         <div className="segment">
           <div className="flex">
 
           <div className="half column stat">
             <Link to="react">
-              <h6>Interested in using Angular 2?</h6>
-              <div className="circle" id="angular2-interest-circle"></div>
+              <h6>Interested in using Angular?</h6>
+              <div className="circle" id="angular-interest-circle"></div>
             </Link>
           </div>
 
             <div className="half column stat">
               <Link to="angular-2">
-                <h6>Used Angular 2 and would use it again?</h6>
-                <div className="circle" id="angular2-satisfaction-circle"></div>
+                <h6>Used Angular and would use it again?</h6>
+                <div className="circle" id="angular-satisfaction-circle"></div>
               </Link>
             </div>
         </div>
@@ -70,6 +70,7 @@ render: function() {
 
 
       </div>
+
 
           );
 }
@@ -79,13 +80,13 @@ render: function() {
 
 var mapStateToProps = function(state, props) {
     return {
-        angular2Interest: state.angular2Interest,
-        angular2NotInterested: state.angular2NotInterested,
-        angular2Satisfaction: state.angular2Satisfaction,
-        angular2NotSatisfied: state.angular2NotSatisfied,
+        angularInterest: state.angularInterest,
+        angularNotInterested: state.angularNotInterested,
+        angularSatisfaction: state.angularSatisfaction,
+        angularNotSatisfied: state.angularNotSatisfied,
     };
 };
 
-var Container = connect(mapStateToProps) (withRouter(PageAngular2));
+var Container = connect(mapStateToProps) (withRouter(PageAngular));
 
 module.exports = Container;

@@ -44,19 +44,29 @@ var DashboardPage = React.createClass({
      text:                function(value){return value + '%';},
      colors:              ['black', 'orange']
    });
+
+   Circles.create({
+     id:                  'angular-satisfaction-circle',
+     radius:              70,
+     value:               this.props.emberSatisfaction,
+     maxValue:            100,
+     width:               10,
+     text:                function(value){return value + '%';},
+     colors:              ['black', 'mediumvioletred']
+   });
  },
 
 
  componentDidMount() {
   this.props.dispatch(actions.fetchData());
+  this._createChart();
   console.log(this.props);
 },
 
 render: function() {
-  this._createChart();
-
+this._createChart();
     return (
-      <DashboardPageLayout>
+      <div>
         <h1>State of JavaScript 2016</h1>
         <div className="segment">
           <div className="flex">
@@ -75,10 +85,17 @@ render: function() {
               </Link>
             </div>
 
-            <div className="column center stat">
+            <div className="half column stat">
               <Link to="ember">
                 <h6>Used Ember and would use it again?</h6>
                 <div className="circle" id="ember-satisfaction-circle"></div>
+              </Link>
+            </div>
+
+            <div className="half column stat">
+              <Link to="ember">
+                <h6>Used Angular and would use it again?</h6>
+                <div className="circle" id="angular-satisfaction-circle"></div>
               </Link>
             </div>
         </div>
@@ -116,7 +133,7 @@ render: function() {
           </div>
 
         </div>
-      </DashboardPageLayout>
+      </div>
 
 
           );
@@ -146,6 +163,6 @@ var mapStateToProps = function(state, props) {
     };
 };
 
-var Container = connect(mapStateToProps) (withRouter(DashboardPage));
+var Container = connect(mapStateToProps)(DashboardPage);
 
 module.exports = Container;
