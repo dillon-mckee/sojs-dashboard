@@ -17,7 +17,7 @@ var initialState = {
   angularInterest: '',
   angularNotInterested: '',
   angularSatisfaction: '',
-  angularNotSatisfied: '',
+  angularNotSatisfied: ''
 };
 
 var sojsReducer = function(state, action) {

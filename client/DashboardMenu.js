@@ -25,6 +25,10 @@ var DashboardMenu = function(props) {
             <strong>Angular</strong>
             <em>Everything you need and more.</em>
           </NavLink>
+          <NavLink to="/compare" >
+            <strong>Comparison Tool</strong>
+            <em>Compare stats with each other.</em>
+          </NavLink>
         </nav>
       </div>
 

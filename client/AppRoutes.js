@@ -17,7 +17,7 @@ var DashboardPage = require('./DashboardPage');
 //var PageEmber = require('./PageEmber');
 //var PageReact = require('./PageReact');
 var PageStats = require('./PageStats');
-
+var PageCompare = require('./PageCompare');
 
 var PageAngular2 = function(){
   return(
@@ -66,6 +66,7 @@ var AppRoutes = React.createClass({
                     <Route path="/react" component={PageReact} />
                     <Route path="/ember" component={PageEmber} />
                     <Route path="/angular" component={PageAngular} />
+                    <Route path="/compare" component={PageCompare} />
                   </Route>
       </Router>
             );
