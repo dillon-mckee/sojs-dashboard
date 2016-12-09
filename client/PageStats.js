@@ -109,7 +109,7 @@ render: function() {
   this._createChart();
     return (
       <div>
-        <h1>State of JavaScript 2016: {this.props.name}</h1>
+        <h4 className="column center">State of JavaScript 2016: {this.props.name}</h4>
         <div className="segment">
           <div className="flex">
 
@@ -124,7 +124,38 @@ render: function() {
             </div>
         </div>
         </div>
+        <div className="segment">
 
+       <div className="two thirds column left">
+         <h3>What People Are Saying</h3>
+         {/*<Feed />*/}
+       </div>
+
+       <div className="one third column right">
+         <h3>Latest News</h3>
+         <dl className="news">
+           <dt>
+             <a href="#">How to combine Angular 2, React and Aurelia just because.</a>
+           </dt>
+           <dd>
+             Posted on November 3, 2016
+           </dd>
+           <dt>
+             <a href="#">Is it too soon for React 2?</a>
+           </dt>
+           <dd>
+             Posted on November 2, 2016
+           </dd>
+           <dt>
+             <a href="#">Why Aurelia is about to bring Meteor crashing down.</a>
+           </dt>
+           <dd>
+             Posted on October 29, 2016
+           </dd>
+         </dl>
+       </div>
+
+       </div>
 
       </div>
 

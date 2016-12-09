@@ -37,18 +37,3 @@ Dev: runs watch and serve simultaneously
 ``` bash
 npm run dev
 ```
-
-## Goals and Steps
-
-Write out basic components.
-Select charting library. (CirclesJS).
-Get charts to appear inside component.
-Wire up back-end to feed chart data.
-Define initial state, state variables.
-Configure redux/routes to allow for switching the displayed components and chart data based off state/route.
-
-Add compare drop down box to allow the user to display chart data from two frameworks.
-
-*EXTRA*
-What People are Saying section
-Relevant News section

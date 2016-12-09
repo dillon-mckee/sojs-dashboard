@@ -67,7 +67,7 @@ render: function() {
 this._createChart();
     return (
       <div>
-        <h1>State of JavaScript 2016</h1>
+        <h4 className="column center">State of JavaScript 2016</h4>
         <div className="segment">
           <div className="flex">
 
